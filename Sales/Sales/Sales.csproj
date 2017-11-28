@@ -1,0 +1,594 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9BB4FE10-B0AC-4E8D-ABA4-AC1B3F71D2AD}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sales</RootNamespace>
+    <AssemblyName>Sales</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Allproductitems\36005b6e-3.jpg" />
+    <Content Include="Allproductitems\f7d24d7b-3.jpg" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\Sales.dll" />
+    <Content Include="bin\Sales.pdb" />
+    <Content Include="obj\Debug\Sales.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Sales.dll" />
+    <Content Include="obj\Debug\Sales.pdb" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ads\Thumbs.db" />
+    <Content Include="Allproductitems\Thumbs.db" />
+    <Content Include="Creditcards\Thumbs.db" />
+    <Content Include="debitcards\Thumbs.db" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="tabs\Thumbs.db" />
+    <Content Include="MasterPage.master" />
+    <Content Include="MasterPage2.master" />
+    <Content Include="MasterPage3.master" />
+    <Content Include="salesman.master" />
+    <Content Include="bin\Sales.dll.config" />
+    <Content Include="bin\ApplicationInsights.config" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="Web.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="adminlogin.aspx" />
+    <Content Include="Admin\AddItemDetails.aspx" />
+    <Content Include="Admin\AddItems.aspx" />
+    <Content Include="Admin\AddItemType.aspx" />
+    <Content Include="Admin\addsalesman.aspx" />
+    <Content Include="Admin\productdetails.aspx" />
+    <Content Include="Admin\view salesmandetails.aspx" />
+    <Content Include="Admin\Welcome.aspx" />
+    <Content Include="ads\background.JPG" />
+    <Content Include="ads\banner.JPG" />
+    <Content Include="ads\online-shopping2.jpg" />
+    <Content Include="ads\XMLFile.xml" />
+    <Content Include="Allproductitems\04f3e932-1.jpg" />
+    <Content Include="Allproductitems\0d4b89ae-4.jpg" />
+    <Content Include="Allproductitems\13a4b756-f.jpg" />
+    <Content Include="Allproductitems\1425592d-8.jpg" />
+    <Content Include="Allproductitems\17091a1e-e.jpg" />
+    <Content Include="Allproductitems\189e8aa3-0.jpg" />
+    <Content Include="Allproductitems\18e54bbf-5.jpg" />
+    <Content Include="Allproductitems\2163655e-8.jpg" />
+    <Content Include="Allproductitems\280a28a5-4.jpg" />
+    <Content Include="Allproductitems\30c7ea9e-f.jpg" />
+    <Content Include="Allproductitems\329a5f70-2.jpg" />
+    <Content Include="Allproductitems\33c2e2fe-b.jpg" />
+    <Content Include="Allproductitems\36d3659c-c.jpg" />
+    <Content Include="Allproductitems\3e9e5983-1.jpg" />
+    <Content Include="Allproductitems\4240d9bf-5.jpg" />
+    <Content Include="Allproductitems\43497dd3-3.jpg" />
+    <Content Include="Allproductitems\439f03cf-9.jpg" />
+    <Content Include="Allproductitems\440100b6-b.jpg" />
+    <Content Include="Allproductitems\467ffa61-a.jpg" />
+    <Content Include="Allproductitems\4f2b6c5d-f.jpg" />
+    <Content Include="Allproductitems\70c3bb43-d.jpg" />
+    <Content Include="Allproductitems\73dd15cb-a.jpg" />
+    <Content Include="Allproductitems\74185f3a-b.jpg" />
+    <Content Include="Allproductitems\7462bdc2-2.jpg" />
+    <Content Include="Allproductitems\76a50668-3.jpg" />
+    <Content Include="Allproductitems\7730e26f-0.jpg" />
+    <Content Include="Allproductitems\7cc5150f-b.jpg" />
+    <Content Include="Allproductitems\807a1d97-8.jpg" />
+    <Content Include="Allproductitems\84860885-f.jpg" />
+    <Content Include="Allproductitems\8a14fe63-c.jpg" />
+    <Content Include="Allproductitems\a09370f4-8.jpg" />
+    <Content Include="Allproductitems\a5f1f884-2.jpg" />
+    <Content Include="Allproductitems\ac5ddaae-7.jpg" />
+    <Content Include="Allproductitems\aeee1384-1.jpg" />
+    <Content Include="Allproductitems\aff649ac-c.jpg" />
+    <Content Include="Allproductitems\b2ad6462-f.jpg" />
+    <Content Include="Allproductitems\bf42f7b6-5.jpg" />
+    <Content Include="Allproductitems\c4eef32b-1.jpg" />
+    <Content Include="Allproductitems\d32a2edf-a.jpg" />
+    <Content Include="Allproductitems\d795e0ea-8.jpg" />
+    <Content Include="Allproductitems\dee10767-9.jpg" />
+    <Content Include="Allproductitems\e1788349-2.jpg" />
+    <Content Include="Allproductitems\e272c9a7-e.jpg" />
+    <Content Include="Allproductitems\e40302d1-8.jpg" />
+    <Content Include="Allproductitems\e5d3bebb-1.gif" />
+    <Content Include="Allproductitems\e61c8a2e-e.jpg" />
+    <Content Include="Allproductitems\fa01c26c-2.jpg" />
+    <Content Include="App_Themes\Theme1\StyleSheet.css" />
+    <Content Include="BharathExp.aspx" />
+    <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="bin\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="bin\Microsoft.AI.Web.dll" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="bin\Microsoft.ApplicationInsights.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="Contactus.aspx" />
+    <Content Include="Creditcards\mastercard.jpg" />
+    <Content Include="Creditcards\visa.jpg" />
+    <Content Include="CustomerRegistration.aspx" />
+    <Content Include="debitcards\axisbank.gif" />
+    <Content Include="debitcards\citibakk.gif" />
+    <Content Include="debitcards\hdfcbank.gif" />
+    <Content Include="Home.aspx" />
+    <Content Include="PaymentMode.aspx" />
+    <Content Include="salesmanlogin.aspx" />
+    <Content Include="salesman\CustomerCardDetails.aspx" />
+    <Content Include="salesman\Customers.aspx" />
+    <Content Include="salesman\CustomerSoldProducts.aspx" />
+    <Content Include="salesman\profile.aspx" />
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="tabs\10.GIF" />
+    <Content Include="tabs\11.GIF" />
+    <Content Include="tabs\12.GIF" />
+    <Content Include="tabs\2.gif" />
+    <Content Include="tabs\3.gif" />
+    <Content Include="tabs\4.gif" />
+    <Content Include="tabs\5.gif" />
+    <Content Include="tabs\7.gif" />
+    <Content Include="tabs\8.GIF" />
+    <Content Include="tabs\9.GIF" />
+    <Content Include="UserInBox\AddtoCart.aspx" />
+    <Content Include="UserInBox\billingandshopping.aspx" />
+    <Content Include="UserInBox\creditordebitcard.aspx" />
+    <Content Include="UserInBox\CustomerProfile.aspx" />
+    <Content Include="UserInBox\draftorcheck.aspx" />
+    <Content Include="UserInBox\Order.aspx" />
+    <Content Include="UserInBox\Productconfirmation.aspx" />
+    <Content Include="UserInBox\ProductGallery.aspx" />
+    <Content Include="UserInBox\SoldProducts.aspx" />
+    <Content Include="UserInBox\ViewItemDetails.aspx" />
+    <Content Include="UserLogin.aspx" />
+    <Content Include="user\apprals.aspx" />
+    <Content Include="user\Cosmetics.aspx" />
+    <Content Include="user\Electronics.aspx" />
+    <Content Include="user\Equipments.aspx" />
+    <Content Include="user\Shoes.aspx" />
+    <Content Include="user\ViewDetails.aspx" />
+    <Content Include="user\ViewFullImage.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="WebService.asmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="adminlogin.aspx.cs">
+      <DependentUpon>adminlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminlogin.aspx.designer.cs">
+      <DependentUpon>adminlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddItemDetails.aspx.cs">
+      <DependentUpon>AddItemDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddItemDetails.aspx.designer.cs">
+      <DependentUpon>AddItemDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddItems.aspx.cs">
+      <DependentUpon>AddItems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddItems.aspx.designer.cs">
+      <DependentUpon>AddItems.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddItemType.aspx.cs">
+      <DependentUpon>AddItemType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddItemType.aspx.designer.cs">
+      <DependentUpon>AddItemType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\addsalesman.aspx.cs">
+      <DependentUpon>addsalesman.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\addsalesman.aspx.designer.cs">
+      <DependentUpon>addsalesman.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\productdetails.aspx.cs">
+      <DependentUpon>productdetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\productdetails.aspx.designer.cs">
+      <DependentUpon>productdetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\view salesmandetails.aspx.cs">
+      <DependentUpon>view salesmandetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\view salesmandetails.aspx.designer.cs">
+      <DependentUpon>view salesmandetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Welcome.aspx.cs">
+      <DependentUpon>Welcome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Welcome.aspx.designer.cs">
+      <DependentUpon>Welcome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BharathExp.aspx.cs">
+      <DependentUpon>BharathExp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BharathExp.aspx.designer.cs">
+      <DependentUpon>BharathExp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contactus.aspx.cs">
+      <DependentUpon>Contactus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contactus.aspx.designer.cs">
+      <DependentUpon>Contactus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerRegistration.aspx.cs">
+      <DependentUpon>CustomerRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerRegistration.aspx.designer.cs">
+      <DependentUpon>CustomerRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.master.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.master.designer.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage2.master.cs">
+      <DependentUpon>MasterPage2.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage2.master.designer.cs">
+      <DependentUpon>MasterPage2.master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage3.master.cs">
+      <DependentUpon>MasterPage3.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage3.master.designer.cs">
+      <DependentUpon>MasterPage3.master</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentMode.aspx.cs">
+      <DependentUpon>PaymentMode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaymentMode.aspx.designer.cs">
+      <DependentUpon>PaymentMode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="salesman.master.cs">
+      <DependentUpon>salesman.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="salesman.master.designer.cs">
+      <DependentUpon>salesman.master</DependentUpon>
+    </Compile>
+    <Compile Include="salesmanlogin.aspx.cs">
+      <DependentUpon>salesmanlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="salesmanlogin.aspx.designer.cs">
+      <DependentUpon>salesmanlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="salesman\CustomerCardDetails.aspx.designer.cs">
+      <DependentUpon>CustomerCardDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="salesman\Customers.aspx.designer.cs">
+      <DependentUpon>Customers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="salesman\CustomerSoldProducts.aspx.designer.cs">
+      <DependentUpon>CustomerSoldProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="salesman\profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInBox\AddtoCart.aspx.cs">
+      <DependentUpon>AddtoCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInBox\AddtoCart.aspx.designer.cs">
+      <DependentUpon>AddtoCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInBox\billingandshopping.aspx.cs">
+      <DependentUpon>billingandshopping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInBox\billingandshopping.aspx.designer.cs">
+      <DependentUpon>billingandshopping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInBox\creditordebitcard.aspx.cs">
+      <DependentUpon>creditordebitcard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInBox\creditordebitcard.aspx.designer.cs">
+      <DependentUpon>creditordebitcard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInBox\CustomerProfile.aspx.cs">
+      <DependentUpon>CustomerProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInBox\CustomerProfile.aspx.designer.cs">
+      <DependentUpon>CustomerProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInBox\draftorcheck.aspx.cs">
+      <DependentUpon>draftorcheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInBox\draftorcheck.aspx.designer.cs">
+      <DependentUpon>draftorcheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInBox\Order.aspx.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInBox\Order.aspx.designer.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInBox\Productconfirmation.aspx.cs">
+      <DependentUpon>Productconfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInBox\Productconfirmation.aspx.designer.cs">
+      <DependentUpon>Productconfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInBox\ProductGallery.aspx.cs">
+      <DependentUpon>ProductGallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInBox\ProductGallery.aspx.designer.cs">
+      <DependentUpon>ProductGallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInBox\SoldProducts.aspx.cs">
+      <DependentUpon>SoldProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInBox\SoldProducts.aspx.designer.cs">
+      <DependentUpon>SoldProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInBox\ViewItemDetails.aspx.cs">
+      <DependentUpon>ViewItemDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInBox\ViewItemDetails.aspx.designer.cs">
+      <DependentUpon>ViewItemDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogin.aspx.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserLogin.aspx.designer.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\apprals.aspx.cs">
+      <DependentUpon>apprals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\apprals.aspx.designer.cs">
+      <DependentUpon>apprals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\Cosmetics.aspx.cs">
+      <DependentUpon>Cosmetics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\Cosmetics.aspx.designer.cs">
+      <DependentUpon>Cosmetics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\Electronics.aspx.cs">
+      <DependentUpon>Electronics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\Electronics.aspx.designer.cs">
+      <DependentUpon>Electronics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\Equipments.aspx.cs">
+      <DependentUpon>Equipments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\Equipments.aspx.designer.cs">
+      <DependentUpon>Equipments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\Shoes.aspx.cs">
+      <DependentUpon>Shoes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\Shoes.aspx.designer.cs">
+      <DependentUpon>Shoes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\ViewDetails.aspx.cs">
+      <DependentUpon>ViewDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\ViewDetails.aspx.designer.cs">
+      <DependentUpon>ViewDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\ViewFullImage.aspx.cs">
+      <DependentUpon>ViewFullImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="salesman\CustomerCardDetails.aspx.cs">
+      <DependentUpon>CustomerCardDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="salesman\Customers.aspx.cs">
+      <DependentUpon>Customers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="salesman\CustomerSoldProducts.aspx.cs">
+      <DependentUpon>CustomerSoldProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="salesman\profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\ViewFullImage.aspx.designer.cs">
+      <DependentUpon>ViewFullImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebService.cs">
+      <DependentUpon>WebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="Old_App_Code\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>31432</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:31432/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
