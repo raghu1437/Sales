@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3326EE0B-B406-4D5C-AFE1-A9C435F258B8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StudentMgmSystem</RootNamespace>
+    <AssemblyName>StudentMgmSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Old_App_Code\inst.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>inst1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Old_App_Code\tfeepaid.cs.exclude" />
+    <Content Include="bin\GSMCommServer.dll.refresh" />
+    <Content Include="bin\GSMCommShared.dll.refresh" />
+    <Content Include="bin\GSMCommunication.dll.refresh" />
+    <Content Include="bin\inst_mgmt.dll.refresh" />
+    <Content Include="bin\NokiaCLMessaging.dll.refresh" />
+    <Content Include="bin\PDUConverter.dll.refresh" />
+    <Content Include="MasterPage.master" />
+    <Content Include="README.md" />
+    <Content Include="vwd.webinfo" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="aboutus.aspx" />
+    <Content Include="administration.aspx" />
+    <Content Include="Old_App_Code\GSMCommServer.dll" />
+    <Content Include="Old_App_Code\GSMCommServer.xml" />
+    <Content Include="Old_App_Code\GSMCommShared.dll" />
+    <Content Include="Old_App_Code\GSMCommShared.xml" />
+    <Content Include="Old_App_Code\GSMCommunication.dll" />
+    <Content Include="Old_App_Code\GSMCommunication.xml" />
+    <Content Include="Old_App_Code\NokiaCLMessaging.dll" />
+    <Content Include="Old_App_Code\PDUConverter.dll" />
+    <Content Include="Old_App_Code\PDUConverter.xml" />
+    <Content Include="App_Data\ASPNETDB.MDF" />
+    <Content Include="App_Data\aspnetdb_log.ldf">
+      <DependentUpon>ASPNETDB.MDF</DependentUpon>
+    </Content>
+    <Content Include="App_Data\inst_mgmt_sys.mdf" />
+    <Content Include="App_Data\inst_mgmt_sys_log.ldf">
+      <DependentUpon>inst_mgmt_sys.mdf</DependentUpon>
+    </Content>
+    <Content Include="bin\GSMCommServer.dll" />
+    <Content Include="bin\GSMCommServer.xml" />
+    <Content Include="bin\GSMCommShared.dll" />
+    <Content Include="bin\GSMCommShared.xml" />
+    <Content Include="bin\GSMCommunication.dll" />
+    <Content Include="bin\GSMCommunication.xml" />
+    <Content Include="bin\inst_mgmt.dll" />
+    <Content Include="bin\inst_mgmt.pdb" />
+    <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="bin\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="bin\Microsoft.AI.Web.dll" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="bin\Microsoft.ApplicationInsights.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\NokiaCLMessaging.dll" />
+    <Content Include="bin\PDUConverter.dll" />
+    <Content Include="bin\PDUConverter.xml" />
+    <Content Include="branchrslt.aspx" />
+    <Content Include="contactus.aspx" />
+    <Content Include="contentslider.css" />
+    <Content Include="contentslider.js" />
+    <Content Include="css\19-1-10-1-14.css" />
+    <Content Include="datesheet.aspx" />
+    <Content Include="Default12.aspx" />
+    <Content Include="Default13.aspx" />
+    <Content Include="Default14.aspx" />
+    <Content Include="Default5.aspx" />
+    <Content Include="Default6.aspx" />
+    <Content Include="Default7.aspx" />
+    <Content Include="Default8.aspx" />
+    <Content Include="facultyhome.aspx" />
+    <Content Include="FAQ.aspx" />
+    <Content Include="feedback.aspx" />
+    <Content Include="feespage.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="home.aspx" />
+    <Content Include="images\a.jpg" />
+    <Content Include="images\B.jpg" />
+    <Content Include="images\banner.jpg" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\contact-us.jpg" />
+    <Content Include="images\corporate_accounts_words_banner.jpg" />
+    <Content Include="images\feedback_banner.jpg" />
+    <Content Include="images\Feedback_banner_01.gif" />
+    <Content Include="images\footer.jpg" />
+    <Content Include="images\h.jpg" />
+    <Content Include="images\hover2.jpg" />
+    <Content Include="images\img_placementCell.jpg" />
+    <Content Include="images\ka.jpg" />
+    <Content Include="images\kl1.jpg" />
+    <Content Include="images\kl10.jpg" />
+    <Content Include="images\kl11.jpg" />
+    <Content Include="images\kl12.jpg" />
+    <Content Include="images\kl2.jpg" />
+    <Content Include="images\kl3.jpg" />
+    <Content Include="images\kl4.jpg" />
+    <Content Include="images\kl5.jpg" />
+    <Content Include="images\kl6.jpg" />
+    <Content Include="images\kl7.bmp" />
+    <Content Include="images\kl8.jpg" />
+    <Content Include="images\kl9.jpg" />
+    <Content Include="images\l.jpg" />
+    <Content Include="images\m.jpg" />
+    <Content Include="images\mike-lee-cartoon-prof.jpg" />
+    <Content Include="images\mk.jpg" />
+    <Content Include="images\money_bags.png" />
+    <Content Include="images\o.jpg" />
+    <Content Include="images\owl-cartoon.jpg" />
+    <Content Include="images\P.jpg" />
+    <Content Include="images\q1.jpg" />
+    <Content Include="images\s1.jpg" />
+    <Content Include="images\scan[1].jpg" />
+    <Content Include="images\Schools-Education-Cartoonville-Teacher.jpg" />
+    <Content Include="images\section-students.jpg" />
+    <Content Include="images\sider1.jpg" />
+    <Content Include="images\sider2.jpg" />
+    <Content Include="images\StudentsBanner01.jpg" />
+    <Content Include="images\t.jpg" />
+    <Content Include="images\teacher_banner.jpg" />
+    <Content Include="images\templatemo_ads.jpg" />
+    <Content Include="images\templatemo_bg.jpg" />
+    <Content Include="images\templatemo_btn_01.jpg" />
+    <Content Include="images\templatemo_btn_02.jpg" />
+    <Content Include="images\templatemo_comment_icon.gif" />
+    <Content Include="images\templatemo_content_bottom.jpg" />
+    <Content Include="images\templatemo_content_top.jpg" />
+    <Content Include="images\templatemo_footer_bg.jpg" />
+    <Content Include="images\templatemo_footer_bg_repeat.jpg" />
+    <Content Include="images\templatemo_h1_bg.jpg" />
+    <Content Include="images\templatemo_menu_bg.jpg" />
+    <Content Include="images\templatemo_menu_panel_bg.jpg" />
+    <Content Include="images\templatemo_post_bg.jpg" />
+    <Content Include="images\templatemo_post_title_bg.jpg" />
+    <Content Include="images\templatemo_thumb_03.jpg" />
+    <Content Include="images\templatemo_top_panel_bg.jpg" />
+    <Content Include="images\u.jpg" />
+    <Content Include="internal1.aspx" />
+    <Content Include="result.aspx" />
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="templatemo_style.css" />
+    <Content Include="useracc.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aboutus.aspx.designer.cs">
+      <DependentUpon>aboutus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="administration.aspx.designer.cs">
+      <DependentUpon>administration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="branchrslt.aspx.designer.cs">
+      <DependentUpon>branchrslt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="datesheet.aspx.designer.cs">
+      <DependentUpon>datesheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default12.aspx.designer.cs">
+      <DependentUpon>Default12.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default13.aspx.designer.cs">
+      <DependentUpon>Default13.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default14.aspx.designer.cs">
+      <DependentUpon>Default14.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default5.aspx.designer.cs">
+      <DependentUpon>Default5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default6.aspx.designer.cs">
+      <DependentUpon>Default6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default7.aspx.designer.cs">
+      <DependentUpon>Default7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default8.aspx.designer.cs">
+      <DependentUpon>Default8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="facultyhome.aspx.designer.cs">
+      <DependentUpon>facultyhome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAQ.aspx.designer.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="feedback.aspx.designer.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="feespage.aspx.designer.cs">
+      <DependentUpon>feespage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="internal1.aspx.designer.cs">
+      <DependentUpon>internal1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.master.designer.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="result.aspx.cs">
+      <DependentUpon>result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="result.aspx.designer.cs">
+      <DependentUpon>result.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="useracc.aspx.cs">
+      <DependentUpon>useracc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Old_App_Code\administration.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Old_App_Code\bill.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Old_App_Code\charge.cs" />
+    <Compile Include="Old_App_Code\feedback.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Old_App_Code\image.cs" />
+    <Compile Include="Old_App_Code\inst.designer.cs" />
+    <Compile Include="Old_App_Code\malumni.cs" />
+    <Compile Include="Old_App_Code\marksint.cs" />
+    <Compile Include="Old_App_Code\mcourse.cs" />
+    <Compile Include="Old_App_Code\mdatesheet.cs" />
+    <Compile Include="Old_App_Code\mevent.cs" />
+    <Compile Include="Old_App_Code\mfee.cs" />
+    <Compile Include="Old_App_Code\mpassword.cs" />
+    <Compile Include="Old_App_Code\mresult.cs" />
+    <Compile Include="Old_App_Code\mstaff.cs" />
+    <Compile Include="Old_App_Code\mstudent.cs" />
+    <Compile Include="Old_App_Code\tattendancestaff.cs" />
+    <Compile Include="Old_App_Code\tattendance_stu.cs" />
+    <Compile Include="Old_App_Code\transport.cs" />
+    <Compile Include="Old_App_Code\tsalarypaid.cs" />
+    <Compile Include="Old_App_Code\inst1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>inst.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="aboutus.aspx.cs">
+      <DependentUpon>aboutus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administration.aspx.cs">
+      <DependentUpon>administration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bill.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="branchrslt.aspx.cs">
+      <DependentUpon>branchrslt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contactus.aspx.cs">
+      <DependentUpon>contactus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="datesheet.aspx.cs">
+      <DependentUpon>datesheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default12.aspx.cs">
+      <DependentUpon>Default12.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default13.aspx.cs">
+      <DependentUpon>Default13.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default14.aspx.cs">
+      <DependentUpon>Default14.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default5.aspx.cs">
+      <DependentUpon>Default5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default6.aspx.cs">
+      <DependentUpon>Default6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default7.aspx.cs">
+      <DependentUpon>Default7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default8.aspx.cs">
+      <DependentUpon>Default8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="facultyhome.aspx.cs">
+      <DependentUpon>facultyhome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAQ.aspx.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="feedback.aspx.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="feespage.aspx.cs">
+      <DependentUpon>feespage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="internal1.aspx.cs">
+      <DependentUpon>internal1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.master.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="useracc.aspx.designer.cs">
+      <DependentUpon>useracc.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Old_App_Code\inst.dbml.layout">
+      <DependentUpon>inst.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7459</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:7459/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
