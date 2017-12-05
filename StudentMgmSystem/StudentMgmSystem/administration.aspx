@@ -1,6 +1,6 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" Inherits="administration" Title="Untitled Page" Codebehind="administration.aspx.cs" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" Inherits="administration" Title="Untitled Page" CodeBehind="administration.aspx.cs" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <p style="width: 933px">
         <br />
         <table style="width: 100%; height: 160px;">
@@ -37,41 +37,35 @@
                 </td>
             </tr>
             <tr>
-                <td style="width: 162px; height: 26px">
-                    </td>
+                <td style="width: 162px; height: 26px"></td>
                 <td style="height: 26px">
-                    <asp:Button ID="Button1" runat="server" Text="ADD" Width="101px" 
-                        onclick="Button1_Click" Visible="False" />
+                    <asp:Button ID="Button1" runat="server" Text="ADD" Width="101px"
+                        OnClick="Button1_Click" Visible="False" />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="Button2" runat="server" Text="CANCEL" Width="100px" 
+                   
+                    <asp:Button ID="Button2" runat="server" Text="CANCEL" Width="100px"
                         Visible="False" />
                 </td>
             </tr>
             <tr>
-                <td style="width: 162px; height: 26px">
-                    &nbsp;</td>
-                <td style="height: 26px">
-                    &nbsp;</td>
+                <td style="width: 162px; height: 26px">&nbsp;</td>
+                <td style="height: 26px">&nbsp;</td>
             </tr>
             <tr>
-                <td style="width: 162px; height: 26px">
-                    &nbsp;</td>
-                <td style="height: 26px">
-                    &nbsp;</td>
+                <td style="width: 162px; height: 26px">&nbsp;</td>
+                <td style="height: 26px">&nbsp;</td>
             </tr>
-            </table>
+        </table>
         <p align="left">
-            <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" 
-                Width="930px" AutoGenerateEditButton="True" 
+            <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False"
+                Width="930px" 
                 DataSourceID="objadministration" ForeColor="White">
                 <Columns>
-                <asp:BoundField HeaderText="NAME" DataField="name" />
-                <asp:BoundField HeaderText="DESIGNATION" DataField="designation" />
-                <asp:BoundField HeaderText="NUMBER" DataField="number" />
-                <asp:BoundField HeaderText="EMAIL ID" DataField="email" /></Columns>
+                    <asp:BoundField HeaderText="Faculty Name" DataField="name" ReadOnly="true" />
+                </Columns>
             </asp:GridView>
             <asp:ObjectDataSource runat="server" ID="objadministration" TypeName="administration" DataObjectTypeName="administration" SelectMethod="select" InsertMethod="insert" UpdateMethod="update"></asp:ObjectDataSource>
         </p>
-        </p>
+    </p>
 </asp:Content>
 

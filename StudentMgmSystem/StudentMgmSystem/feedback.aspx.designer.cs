@@ -39,24 +39,6 @@ public partial class feedback {
     protected global::System.Web.UI.WebControls.TextBox TextBox3;
     
     /// <summary>
-    /// TextBox4 control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.TextBox TextBox4;
-    
-    /// <summary>
-    /// TextBox5 control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.TextBox TextBox5;
-    
-    /// <summary>
     /// TextBox6 control.
     /// </summary>
     /// <remarks>
@@ -84,20 +66,20 @@ public partial class feedback {
     protected global::System.Web.UI.WebControls.Button Button2;
     
     /// <summary>
-    /// GridView1 control.
+    /// lblNotify control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.GridView GridView1;
+    protected global::System.Web.UI.WebControls.Label lblNotify;
     
     /// <summary>
-    /// objfeed control.
+    /// HyperLink2 control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.ObjectDataSource objfeed;
+    protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
 }

@@ -20,10 +20,8 @@
                     AutoGenerateEditButton="True" 
                     Height="174px" Width="692px" DataSourceID="objre">
                     <columns>
-                    <asp:BoundField HeaderText="SR.NO" DataField="srno"/>
-                     <asp:BoundField HeaderText="SEMESTER" DataField="batchid" />
-                    <asp:BoundField HeaderText="SUBID" DataField="subid"/>
-                   
+                    <asp:BoundField HeaderText="SEMESTER" DataField="batchid" />
+                    <asp:BoundField HeaderText="SUBID" DataField="subid"/>                   
                     <asp:BoundField HeaderText="ROLL NO" DataField="enrolmentno"/>
                     <asp:BoundField HeaderText="MARKS THEORY" DataField="markstheory"/>
                     <asp:BoundField HeaderText="MARKS PRACTICAL" DataField="markspractical" />

@@ -6,28 +6,26 @@
             AutoGenerateEditButton="True" AutoGenerateRows="False" Height="50px" 
             onpageindexchanging="DetailsView1_PageIndexChanging" Width="293px" DataSourceID="objstu">
         <Fields>
-                    <asp:BoundField HeaderText="ROLL NO" DataField="enrolmentno"/>
-                   <asp:BoundField HeaderText="FIRST NAME" DataField="firstname"/>
-                   <asp:BoundField HeaderText="LAST NAME" DataField="lastname"/>
-                   <asp:BoundField HeaderText="COURSE ID" DataField="courseid"/>
-                   <asp:BoundField HeaderText="REFERENCE NO" DataField="referenceno"/>
-                   <asp:BoundField HeaderText="ADDRESS 1" DataField="address1"/>
-                   <asp:BoundField HeaderText="ADDRESS 2" DataField="address2"/>
-                   <asp:BoundField HeaderText="ADDRESS 3" DataField="address3"/>
-                   <asp:BoundField HeaderText="CITY" DataField="city"/>
-                    <asp:BoundField HeaderText="PIN" DataField="pin"/>
-                   <asp:BoundField HeaderText="STATE" DataField="state"/>
-                   <asp:BoundField HeaderText="DOB" DataField="dob"/>
-                   <asp:BoundField HeaderText="FATHER NAME" DataField="fathername"/>
-                   <asp:BoundField HeaderText="MOTHER NAME" DataField="mothername"/>
-                   <asp:BoundField HeaderText="CATEGORY" DataField="category"/>
-                   <asp:BoundField HeaderText="PHONE" DataField="phone"/>
-                   <asp:BoundField HeaderText="GENDER" DataField="gender"/>
-                   <asp:BoundField HeaderText="EMAIL" DataField="email"/>
-                    
+                   <asp:BoundField HeaderText="Student Id" DataField="enrolmentno" ReadOnly="true"/>
+                   <asp:BoundField HeaderText="First Name" DataField="firstname"/>
+                   <asp:BoundField HeaderText="Last Name" DataField="lastname"/>
+                   <asp:BoundField HeaderText="Course Id" DataField="courseid" ReadOnly="true"/>                   
+                   <asp:BoundField HeaderText="Contact No" DataField="phone"/>                    
                     </Fields>
                     </asp:DetailsView>
                     <asp:ObjectDataSource runat="server" ID="objstu" TypeName="mstudent" DataObjectTypeName="mstudent" SelectMethod="select" InsertMethod="insert" UpdateMethod="update"></asp:ObjectDataSource>
     </p>
+    <table>
+        <tr>
+            <td style="width: 496px" align="center">
+            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/facultyhome.aspx">Back to Faculty Page</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Admin.aspx">Back to Admin Page</asp:HyperLink>
+            
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+    </table>  
+    
 </asp:Content>
 

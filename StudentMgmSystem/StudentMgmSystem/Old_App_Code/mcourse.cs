@@ -22,6 +22,14 @@ public partial class mcourse
             return data.mcourses.ToArray();
         }
     }
+    public static mcourse[] selectCourse(string courseId)
+    {
+        using (var data = new instDataContext())
+        {
+            return data.mcourses.Where(s => s.course_id == courseId).ToArray();
+        }
+    }
+
     public static void insert(mcourse s)
     {
         using (var data = new instDataContext())

@@ -24,7 +24,8 @@ public partial class Default5 : System.Web.UI.Page
     string q;
     protected void Button1_Click(object sender, EventArgs e)
     {
-        q = "select usertype from mpasswords where username='" + TextBox1.Text + "' and password='" + TextBox2.Text + "'";
+        
+        q = "select * from mpasswords where username='" + TextBox1.Text + "' and password='" + TextBox2.Text + "'";
         cn = new SqlConnection(@"Data Source=HYRDCND5340CD1\SQL2014;Initial Catalog=inst_mgmt_sys;User ID=HRnet;Password=pword;Pooling=true;Min Pool Size=10;Max Pool Size=1000");
         cn.Open();
         cmd = new SqlCommand(q, cn);
@@ -33,22 +34,24 @@ public partial class Default5 : System.Web.UI.Page
         {
             Label2.Text = dr[0].ToString();
         }
-        if (Label2.Text == "admin")
-        { Response.Redirect("adminhome.aspx"); }
+        Session["user"] = dr[3].ToString();
+        Session["usertype"] = Label2.Text;
+        if (Label2.Text.ToLower() == "admin")
+        { Response.Redirect("Admin.aspx"); }
         else
         {
-            if (Label2.Text == "faculty")
+            if (Label2.Text.ToLower() == "faculty")
             { Response.Redirect("facultyhome.aspx"); }
             else
             {
-                if (Label2.Text == "student")
+                if (Label2.Text.ToLower() == "student")
                 { Response.Redirect("studenthome.aspx"); }
                 else
                 {
-                    if (Label2.Text == "alumni")
+                    if (Label2.Text.ToLower() == "alumni")
                     { Response.Redirect("alumnihome.aspx"); }
                     else
-                    { Response.Write("YOU ARE NOT A VALID USER"); }
+                    { Response.Write("You are not a valid user."); }
                 }
             }
         }

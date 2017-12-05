@@ -25,21 +25,21 @@
                 <td>
                     &nbsp;</td>
             </tr>
-            <tr>
+            <tr style="font-size:20px">
                 <td>
-                    HELLO !! USER !</td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    HAVE ANY QUERRY............................................</td>
+                    Harsha Vardhan Reddy Marella</td>
                 <td>
                     &nbsp;</td>
             </tr>
-            <tr>
+            <tr style="font-size:20px">
                 <td>
-                    PLEASE FEEL FREE TO&nbsp; CONTACT THE UNDERSIGNED OR JUST FILL THE FEEDBACK FORM.</td>
+                    700649277</td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr style="font-size:20px">
+                <td>
+                    hxm92770@ucmo.edu</td>
                 <td>
                     &nbsp;</td>
             </tr>

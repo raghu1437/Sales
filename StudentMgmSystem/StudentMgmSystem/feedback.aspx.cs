@@ -15,20 +15,16 @@ public partial class feedback : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+        //Page.Title = "Feedback";
+        //dview1.Visible = true;
+        lblNotify.Visible = false;
     }
-    protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
-    {
-        //GridView1.PageIndex = e.NewPageIndex;
-        //feedback.select();
-    }
+    
     protected void Button2_Click(object sender, EventArgs e)
     {
         TextBox1.Text = "";
         TextBox2.Text = "";
-        TextBox3.Text = "";
-        TextBox4.Text = "";
-        TextBox5.Text = "";
+        TextBox3.Text = "";        
         TextBox6.Text = "";
     }
     protected void Button1_Click(object sender, EventArgs e)
@@ -37,9 +33,22 @@ public partial class feedback : System.Web.UI.Page
         f.name = TextBox1.Text;
         f.phone = TextBox2.Text;
         f.email = TextBox3.Text;
-        f.address = TextBox4.Text;
-        f.city = TextBox5.Text;
+        f.address = "";
+        f.city = "";
         f.feedback1 = TextBox6.Text;
         feedback.insert(f);
+        TextBox1.Text = "";
+        TextBox2.Text = "";
+        TextBox3.Text = "";
+        TextBox6.Text = "";
+        lblNotify.Text = "Thanks for your feedback";
+        lblNotify.Visible = true;
+        
+    }
+
+    protected void dview1_PageIndexChanging(object sender, DetailsViewPageEventArgs e)
+    {
+        //dview1.PageIndex = e.NewPageIndex;
+        feedback.select();
     }
 }

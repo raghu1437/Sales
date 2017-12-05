@@ -95,6 +95,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin.aspx" />
+    <Content Include="Default12.aspx" />
+    <Content Include="EnrollStudentsToCourse.aspx" />
+    <Content Include="images\studentimage.jpg" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -113,6 +117,9 @@
     <Content Include="bin\PDUConverter.dll.refresh" />
     <Content Include="MasterPage.master" />
     <Content Include="README.md" />
+    <Content Include="StudentCoursesEnrolled.aspx" />
+    <Content Include="studenthome.aspx" />
+    <Content Include="StudentResult.aspx" />
     <Content Include="vwd.webinfo" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -167,7 +174,6 @@
     <Content Include="contentslider.js" />
     <Content Include="css\19-1-10-1-14.css" />
     <Content Include="datesheet.aspx" />
-    <Content Include="Default12.aspx" />
     <Content Include="Default13.aspx" />
     <Content Include="Default14.aspx" />
     <Content Include="Default5.aspx" />
@@ -252,6 +258,13 @@
     <Compile Include="aboutus.aspx.designer.cs">
       <DependentUpon>aboutus.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="administration.aspx.designer.cs">
       <DependentUpon>administration.aspx</DependentUpon>
     </Compile>
@@ -260,6 +273,10 @@
     </Compile>
     <Compile Include="datesheet.aspx.designer.cs">
       <DependentUpon>datesheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default12.aspx.cs">
+      <DependentUpon>Default12.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default12.aspx.designer.cs">
       <DependentUpon>Default12.aspx</DependentUpon>
@@ -281,6 +298,13 @@
     </Compile>
     <Compile Include="Default8.aspx.designer.cs">
       <DependentUpon>Default8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnrollStudentsToCourse.aspx.cs">
+      <DependentUpon>EnrollStudentsToCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnrollStudentsToCourse.aspx.designer.cs">
+      <DependentUpon>EnrollStudentsToCourse.aspx</DependentUpon>
     </Compile>
     <Compile Include="facultyhome.aspx.designer.cs">
       <DependentUpon>facultyhome.aspx</DependentUpon>
@@ -309,6 +333,27 @@
     </Compile>
     <Compile Include="result.aspx.designer.cs">
       <DependentUpon>result.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentCoursesEnrolled.aspx.cs">
+      <DependentUpon>StudentCoursesEnrolled.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentCoursesEnrolled.aspx.designer.cs">
+      <DependentUpon>StudentCoursesEnrolled.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="studenthome.aspx.cs">
+      <DependentUpon>studenthome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="studenthome.aspx.designer.cs">
+      <DependentUpon>studenthome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentResult.aspx.cs">
+      <DependentUpon>StudentResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentResult.aspx.designer.cs">
+      <DependentUpon>StudentResult.aspx</DependentUpon>
     </Compile>
     <Compile Include="useracc.aspx.cs">
       <DependentUpon>useracc.aspx</DependentUpon>
@@ -366,10 +411,6 @@
     </Compile>
     <Compile Include="datesheet.aspx.cs">
       <DependentUpon>datesheet.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default12.aspx.cs">
-      <DependentUpon>Default12.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default13.aspx.cs">
@@ -438,6 +479,7 @@
   <ItemGroup>
     <None Include="Old_App_Code\inst.dbml.layout">
       <DependentUpon>inst.dbml</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -45,4 +45,9 @@ public partial class home : System.Web.UI.Page
     {
         Response.Redirect("default13.aspx");
     }
+
+    protected void LinkButton1_Click1(object sender, EventArgs e)
+    {
+        Response.Redirect("administration.aspx");
+    }
 }

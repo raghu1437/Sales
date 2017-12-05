@@ -22,6 +22,14 @@ public  partial class marksint
             return data.marksints.ToArray();   
         }
     }
+
+    public static marksint[] selectStudentResult(string enrollmentNo)
+    {
+        using (var data = new instDataContext())
+        {
+            return data.marksints.Where(x=>x.rollno==enrollmentNo).ToArray();
+        }
+    }
     public static void insert(marksint m)
     {
         using (var data = new instDataContext())

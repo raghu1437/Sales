@@ -1,17 +1,6 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" Inherits="facultyhome" Title="Untitled Page" Codebehind="facultyhome.aspx.cs" %>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Admin.aspx.cs" Inherits="StudentMgmSystem.Admin" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table style="width: 100%">
-        <tr>
-            <td align="left" style="width: 187px; height: 223px">
-                <asp:Image ID="Image1" runat="server" Height="218px" Width="243px" 
-                    ImageUrl="~/images/Schools-Education-Cartoonville-Teacher.jpg" />
-            </td>
-            <td align="left" style="height: 223px">
-                <asp:Image ID="Image2" runat="server" Height="216px" Width="672px" 
-                    ImageUrl="~/images/teacher_banner.jpg" />
-            </td>
-        </tr>
         <tr>
             <td style="width: 187px">
                 &nbsp;</td>
@@ -22,7 +11,7 @@
             <td style="width: 187px">
                 </td>
             <td align="center">
-                Welcome to Faculty Page</td>
+                Welcome to Admin Page</td>
         </tr>
         <tr>
             <td style="width: 187px" align="center">
@@ -88,4 +77,3 @@
         </tr>
     </table>
 </asp:Content>
-

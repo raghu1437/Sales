@@ -22,6 +22,14 @@ public  partial class mstudent
             return data.mstudents.ToArray();
         }
     }
+
+    public static mstudent[] selectStudent(string enrollmentNo)
+    {
+        using (var data = new instDataContext())
+        {
+            return data.mstudents.Where(s => s.enrolmentno == enrollmentNo).ToArray();
+        }
+    }
     public static void insert(mstudent m)
     {
         using (var data = new instDataContext())

@@ -30,24 +30,6 @@ public partial class internal1 {
     protected global::System.Web.UI.WebControls.Button Button4;
     
     /// <summary>
-    /// Label9 control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.Label Label9;
-    
-    /// <summary>
-    /// TextBox8 control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.TextBox TextBox8;
-    
-    /// <summary>
     /// Label2 control.
     /// </summary>
     /// <remarks>
@@ -57,13 +39,13 @@ public partial class internal1 {
     protected global::System.Web.UI.WebControls.Label Label2;
     
     /// <summary>
-    /// TextBox1 control.
+    /// ddlStudentId control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.TextBox TextBox1;
+    protected global::System.Web.UI.WebControls.DropDownList ddlStudentId;
     
     /// <summary>
     /// Label3 control.
@@ -75,13 +57,13 @@ public partial class internal1 {
     protected global::System.Web.UI.WebControls.Label Label3;
     
     /// <summary>
-    /// TextBox2 control.
+    /// ddlCourses control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.TextBox TextBox2;
+    protected global::System.Web.UI.WebControls.DropDownList ddlCourses;
     
     /// <summary>
     /// Label4 control.
@@ -102,6 +84,15 @@ public partial class internal1 {
     protected global::System.Web.UI.WebControls.TextBox TextBox3;
     
     /// <summary>
+    /// RequiredFieldValidator3 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+    
+    /// <summary>
     /// Label5 control.
     /// </summary>
     /// <remarks>
@@ -118,6 +109,15 @@ public partial class internal1 {
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.TextBox TextBox4;
+    
+    /// <summary>
+    /// RequiredFieldValidator4 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
     
     /// <summary>
     /// Label6 control.
@@ -138,6 +138,15 @@ public partial class internal1 {
     protected global::System.Web.UI.WebControls.TextBox TextBox5;
     
     /// <summary>
+    /// RequiredFieldValidator5 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
+    
+    /// <summary>
     /// Label7 control.
     /// </summary>
     /// <remarks>
@@ -156,22 +165,13 @@ public partial class internal1 {
     protected global::System.Web.UI.WebControls.TextBox TextBox6;
     
     /// <summary>
-    /// Label8 control.
+    /// RequiredFieldValidator6 control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.Label Label8;
-    
-    /// <summary>
-    /// TextBox7 control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.TextBox TextBox7;
+    protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
     
     /// <summary>
     /// Button1 control.
@@ -208,4 +208,22 @@ public partial class internal1 {
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.ObjectDataSource objmarksint;
+    
+    /// <summary>
+    /// HyperLink2 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
+    
+    /// <summary>
+    /// HyperLink1 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
 }
